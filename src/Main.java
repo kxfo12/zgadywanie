@@ -5,7 +5,7 @@ public class Main {
         System.out.println("siemano kolano");
         //typ prosty - tylko wartość - mała litera
         //typ złożony - własności + metody - wielka litera
-        double wylosowanaLiczba = Math.random()*10+1;
+        int wylosowanaLiczba = (int)Math.random()*10+1;//rzutowanie
         System.out.println(wylosowanaLiczba);
     }
 }
