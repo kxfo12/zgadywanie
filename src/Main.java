@@ -22,5 +22,20 @@ public class Main {
         if(roznica != 0){
             System.out.println(roznica);
         }
+        //roznica = roznica/10;//dzielnica calkowita
+        switch(roznica) {
+            case 0:
+                System.out.println("dobra robota");
+                break;
+            case 1:
+                System.out.println("bardzo blisko");
+                break;
+            case 2:
+                System.out.println("blisko");
+                break;
+            default:
+                System.out.println("cieńko");
+                break;
+        }
     }
 }
