@@ -40,7 +40,7 @@ public class Main {
                     break;
             }
         }*/
-        while(wpisanaliczba != wylosowanaLiczba){
+        /*while(wpisanaliczba != wylosowanaLiczba){
             System.out.println("zgadnij liczbe");
             Scanner klawiatura = new Scanner(System.in);
             wpisanaliczba = klawiatura.nextInt();
@@ -76,5 +76,34 @@ public class Main {
             case 2 -> "blisko";
             default -> "cieńko";
         });*/
+        do{
+            System.out.println("zgadnij liczbe");
+            Scanner klawiatura = new Scanner(System.in);
+            wpisanaliczba = klawiatura.nextInt();
+
+            if (wpisanaliczba == wylosowanaLiczba) {
+                System.out.println("gratulacje wygrałeś");
+            } else {
+                System.out.println("nie udało się");
+            }
+            int roznica = wylosowanaLiczba > wpisanaliczba ? wylosowanaLiczba - wpisanaliczba : wpisanaliczba - wylosowanaLiczba;
+            if (roznica != 0) {
+                System.out.println(roznica);
+            }
+            switch (roznica) {
+                case 0:
+                    System.out.println("dobra robota");
+                    break;
+                case 1:
+                    System.out.println("bardzo blisko");
+                    break;
+                case 2:
+                    System.out.println("blisko");
+                    break;
+                default:
+                    System.out.println("cieńko");
+                    break;
+            }
+        }while(wpisanaliczba != wylosowanaLiczba);
     }
 }
